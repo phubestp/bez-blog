@@ -1,0 +1,20 @@
+import Markdown from 'react-markdown'
+import Tag from "../../components/tag";
+
+<span className='text-[rgb(3,0,28)] dark:text-white dark:prose-headings:text-white dark:prose-strong:text-white dark:prose-blockquote:text-white prose-yellow'>
+                 
+<div className="mb-5">
+    <Tag tag={props.tag} />
+</div>
+
+# {props.title}
+
+Written by **{props.author}** at {new Date(props.created_at.toString()).toLocaleDateString('th-TH')}
+
+> {props.description}
+
+<Markdown className="prose-[#03001C] dark:prose-white dark:prose-headings:text-white dark:prose-strong:text-white">
+    {props.content}
+</Markdown>
+
+</span>
